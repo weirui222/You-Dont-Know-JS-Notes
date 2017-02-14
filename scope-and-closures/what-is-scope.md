@@ -73,8 +73,10 @@ foo(2)
 Let’s imagine the above exchange (which processes this code snippet) as a conversation. The conversation would go a little something like this:
 
 **Engine:** Hey Scope, I have an RHS reference for foo. Ever heard of it? 
+
 **Scope:** Why yes, I have. Compiler declared it just a second ago. It’s a
 function. Here you go.
+
 **Engine:** Great, thanks! OK, I’m executing foo.
 **Engine:** Hey, Scope, I’ve got an LHS reference for a, ever heard of it?
 **Scope:** Why yes, I have. Compiler declared it as a formal parameter to foo just recently. Here you go.
