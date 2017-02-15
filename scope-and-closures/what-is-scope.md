@@ -98,6 +98,34 @@ I think I remember it, but just want to double-check.
 
 **Engine:** Cool. Passing the value of a, which is 2, into log(..). ...
 
+##Review
+
+Scope is the set of rules that determines where and how a variable (identifier) can be looked up. This look-up may be for the purposes of assigning to the variable, which is an LHS (lefthand-side) reference, or it may be for the purposes of retrieving its value, which is an RHS (righthand-side) reference.
+
+LHS references result from assignment operations. Scope-related as‐ signments can occur either with the = operator or by passing argu‐ ments to (assign to) function parameters.
+
+The JavaScript engine first compiles code before it executes, and in so doing, it splits up statements like var a = 2; into two separate steps:
+1. First, var a to declare it in that scope. This is performed at the beginning, before code execution.
+2. Later, a = 2 to look up the variable (LHS reference) and assign to it if found.
+
+Both LHS and RHS reference look-ups start at the currently executing scope, and if need be (that is, they don’t find what they’re looking for there), they work their way up the nested scope, one scope (floor) at a time, looking for the identifier, until they get to the global (top floor) and stop, and either find it, or don’t.
+g
+Unfulfilled RHS references result in ReferenceErrors being thrown. Unfulfilled LHS references result in an automatic, implicitly created global of that name (if not in Strict Mode), or a ReferenceError (if in Strict Mode).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
