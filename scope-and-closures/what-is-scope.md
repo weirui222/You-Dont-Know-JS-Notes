@@ -109,7 +109,7 @@ The JavaScript engine first compiles code before it executes, and in so doing, i
 2. Later, a = 2 to look up the variable (LHS reference) and assign to it if found.
 
 Both LHS and RHS reference look-ups start at the currently executing scope, and if need be (that is, they don’t find what they’re looking for there), they work their way up the nested scope, one scope (floor) at a time, looking for the identifier, until they get to the global (top floor) and stop, and either find it, or don’t.
-g
+
 Unfulfilled RHS references result in ReferenceErrors being thrown. Unfulfilled LHS references result in an automatic, implicitly created global of that name (if not in Strict Mode), or a ReferenceError (if in Strict Mode).
 
 
